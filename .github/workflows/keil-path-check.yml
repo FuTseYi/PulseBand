@@ -2,6 +2,8 @@ name: Keil project path check
 
 on:
   pull_request:
+  push:
+    branches: [main]
 
 permissions:
   contents: read
