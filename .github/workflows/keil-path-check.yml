@@ -1,0 +1,17 @@
+name: Keil project path check
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  keil-project-paths:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python scripts/check_keil_paths.py
