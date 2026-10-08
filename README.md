@@ -8,7 +8,7 @@
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Platform](https://img.shields.io/badge/platform-STM32F103-red.svg)
 ![Language](https://img.shields.io/badge/language-C-blue.svg)
-![Status](https://img.shields.io/badge/status-stable-brightgreen.svg)
+![Status](https://img.shields.io/badge/status-prototype-lightgrey.svg)
 
 **An open-source embedded wearable prototype**
 
@@ -40,11 +40,11 @@ This project is suitable for embedded system learners, electronics enthusiasts, 
 - 🔔 **Audio Alarm** - Buzzer alerts for abnormal conditions
 
 ### Technical Features
-- ⚡ **Low Power Design** - Optimized power management for extended battery life
+- ⚡ **Power Management** - Battery-powered design; runtime has not been independently benchmarked
 - 🔄 **Real-time Monitoring** - 100ms data acquisition cycle, fast response
 - 📊 **Data Storage** - Support for historical data caching
 - 🌐 **Wireless Transmission** - WiFi real-time data upload
-- 🎯 **High Precision Algorithm** - Calibrated sensor algorithms ensure data accuracy
+- 🎯 **Sensor Signal Processing** - Physiological estimates require calibration and evaluation against reference instruments
 
 ## 🚀 Quick Start
 
@@ -135,7 +135,7 @@ For detailed hardware list and connection instructions, please refer to [hardwar
 | PB5 | MAX30102 | Interrupt Input |
 | PC13 | Buzzer | GPIO Output |
 
-For complete hardware specifications, see [HARDWARE.md](HARDWARE.md)
+For hardware notes, see [hardware documentation](docs/HARDWARE.md)
 
 ## 📂 Project Structure
 
@@ -181,15 +181,17 @@ Fall Detection: Total_G > 3g or Total_G < 0.5g
 
 For detailed development documentation, refer to [development documentation](docs/DEVELOPMENT.md)
 
-### Performance Specifications
+### Reported Specifications and Verification Status
+
+The following values are taken from prior project documentation. **No independent measurement dataset or calibration protocol is currently included in this repository.** Accuracy and battery-life claims are therefore not verified benchmarks.
 
 | Specification | Value |
 |--------------|-------|
 | Heart Rate Range | 60-100 BPM |
-| SpO2 Accuracy | ±2% |
-| Temperature Accuracy | ±0.5°C |
-| Pedometer Accuracy | ≥95% |
-| Battery Life | Approx. 6-24 hours |
+| SpO2 Accuracy | Not independently verified |
+| Temperature Accuracy | Not independently verified |
+| Pedometer Accuracy | Not independently verified |
+| Battery Life | Not independently benchmarked |
 | WiFi Range | Indoor 10-15 meters |
 | Display Refresh Rate | 10Hz |
 | Data Acquisition Cycle | 100ms |
@@ -262,7 +264,7 @@ Thanks to the following open source projects and resources:
 This device is for health monitoring reference and educational purposes only, not for medical diagnosis.  
 For health concerns, please consult professional medical institutions.
 
-**Made with ❤️ by 謝懿Shine**
+**An educational embedded systems prototype**
 
 </div>
 
