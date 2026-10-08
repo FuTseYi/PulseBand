@@ -1,8 +1,10 @@
 # Keil user/session and generated outputs
 *.uvguix.*
 *.uvoptx
-firmware/OBJ/
-firmware/USER/Listings/
+firmware/OBJ/*
+!firmware/OBJ/.gitkeep
+firmware/USER/Listings/*
+!firmware/USER/Listings/.gitkeep
 *.bak
 *.tmp
 .DS_Store

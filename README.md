@@ -93,6 +93,8 @@ For detailed hardware list and connection instructions, please refer to [hardwar
    - Connect ST-Link to STM32 development board
    - Click `Flash` → `Download` or press `F8`
 
+**Build outputs:** Keil writes generated objects to `firmware/OBJ/` and listings to `firmware/USER/Listings/`. These build artifacts are intentionally ignored. A previously committed `Template.hex` snapshot is preserved under [`firmware/prebuilt/`](firmware/prebuilt/); its hardware compatibility has not been independently verified. For a reproducible firmware image, rebuild from source in Keil.
+
 ### Mobile APP Usage
 
 1. **Install APP**
