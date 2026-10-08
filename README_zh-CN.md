@@ -6,7 +6,7 @@
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Platform](https://img.shields.io/badge/platform-STM32F103-red.svg)
 ![Language](https://img.shields.io/badge/language-C-blue.svg)
-![Status](https://img.shields.io/badge/status-stable-brightgreen.svg)
+![Status](https://img.shields.io/badge/status-prototype-lightgrey.svg)
 
 **基于 STM32F103 的开源可穿戴健康监测原型**
 
@@ -39,11 +39,11 @@
 - 🔔 **声音报警** - 异常情况蜂鸣器提醒
 
 ### 技术特性
-- ⚡ **低功耗设计** - 优化的电源管理，延长续航时间
+- ⚡ **电源管理** - 面向电池供电设计，实际续航尚无独立测试数据
 - 🔄 **实时监测** - 100ms 数据采集周期，响应迅速
 - 📊 **数据存储** - 支持历史数据缓存
 - 🌐 **无线传输** - WiFi 实时数据上传
-- 🎯 **高精度算法** - 经过校准的传感器算法，确保数据准确性
+- 🎯 **传感器信号处理** - 相关健康测量结果需使用参考仪器验证与校准
 
 ## 🚀 快速开始
 
@@ -195,15 +195,17 @@ Total_G = √(X² + Y² + Z²)
 
 详细开发文档请参考 [开发文档](docs/DEVELOPMENT.md)
 
-### 性能指标
+### 规格与验证状态
+
+以下部分数值沿用项目早期文档。仓库当前未提供独立测试数据集或完整校准流程，**不应将精度与续航数值视为已验证的性能指标**。
 
 | 指标 | 规格 |
 |------|------|
 | 心率检测范围 | 60-100 BPM |
-| 血氧检测精度 | ±2% |
-| 温度检测精度 | ±0.5°C |
-| 计步精度 | ≥95% |
-| 电池续航 | 约 6-24 小时 |
+| 血氧检测精度 | 尚无独立验证结果 |
+| 温度检测精度 | 尚无独立验证结果 |
+| 计步精度 | 尚无独立验证结果 |
+| 电池续航 | 尚无完整续航测试数据 |
 | WiFi 传输距离 | 室内 10-15 米 |
 | 显示更新频率 | 10Hz |
 | 数据采集周期 | 100ms |
@@ -254,8 +256,8 @@ Total_G = √(X² + Y² + Z²)
 
 ## 📞 联系方式
 
-- 📧 **Issues**: [提交 Issue](https://github.com/YourUsername/STM32-Health-Band/issues)
-- 💬 **Discussions**: [参与讨论](https://github.com/YourUsername/STM32-Health-Band/discussions)
+- 📧 **Issues**: [提交 Issue](https://github.com/FuTseYi/STM32-Health-Band/issues)
+- 💬 **Discussions**: [参与讨论](https://github.com/FuTseYi/STM32-Health-Band/discussions)
 
 ## 📊 更新日志
 
@@ -276,6 +278,6 @@ Total_G = √(X² + Y² + Z²)
 本设备仅用于健康监测参考和学习研究，不可用于医疗诊断。  
 如有健康问题，请咨询专业医疗机构。
 
-**Made with ❤️ by 謝懿Shine**
+**用于学习与研究的嵌入式原型项目**
 
 </div>
