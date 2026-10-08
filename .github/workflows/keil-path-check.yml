@@ -15,3 +15,4 @@ jobs:
         with:
           python-version: '3.11'
       - run: python scripts/check_keil_paths.py
+      - run: python scripts/check_hex_snapshot.py
