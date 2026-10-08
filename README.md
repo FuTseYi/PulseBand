@@ -4,6 +4,7 @@
 
 <div align="center">
 
+[![Keil & HEX checks](https://github.com/FuTseYi/PulseBand/actions/workflows/keil-path-check.yml/badge.svg)](https://github.com/FuTseYi/PulseBand/actions/workflows/keil-path-check.yml)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Platform](https://img.shields.io/badge/platform-STM32F103-red.svg)
@@ -19,7 +20,7 @@
 </div>
 
 ---
-![Star History Chart](https://api.star-history.com/svg?repos=FuTseYi/STM32-Health-Band&type=Date)
+![Star History Chart](https://api.star-history.com/svg?repos=FuTseYi/PulseBand&type=Date)
 
 ## 📖 Project Overview
 
@@ -78,8 +79,8 @@ For detailed hardware list and connection instructions, please refer to [hardwar
 
 1. **Clone the Project**
    ```bash
-   git clone https://github.com/FuTseYi/STM32-Health-Band.git
-   cd STM32-Health-Band
+   git clone https://github.com/FuTseYi/PulseBand.git
+   cd PulseBand
    ```
 
 2. **Open Project**
@@ -246,8 +247,8 @@ Thanks to the following open source projects and resources:
 
 ## 📞 Contact
 
-- 📧 **Issues**: [Submit Issue](https://github.com/FuTseYi/STM32-Health-Band/issues)
-- 💬 **Discussions**: [Join Discussion](https://github.com/FuTseYi/STM32-Health-Band/discussions)
+- 📧 **Issues**: [Submit Issue](https://github.com/FuTseYi/PulseBand/issues)
+- 💬 **Discussions**: [Join Discussion](https://github.com/FuTseYi/PulseBand/discussions)
 
 ## 📊 Changelog
 
