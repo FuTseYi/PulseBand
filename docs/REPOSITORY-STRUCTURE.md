@@ -1,23 +1,18 @@
-# PulseBand — Repository structure
+# PulseBand — 文件与目录结构 / Repository layout
 
-This file documents the **actual source layout** and highlights why the Keil project has not been reorganized blindly.
-
-| Directory | Contents |
+| 路径 / Path | 用途 / Purpose |
 | --- | --- |
-| `firmware/USER/` | Keil `Template.uvprojx`, MCU application and startup configuration |
-| `firmware/CORE/` | Startup code and core support |
-| `firmware/FWLIB/` | STM32F10x standard peripheral library |
-| `firmware/HARDWAR/` | Sensor and peripheral drivers (MAX30102, ADXL345, OLED and others) |
-| `firmware/SYSTEM/` | Board/system support code |
-| `firmware/OBJ/` | Keil-generated build directory (placeholder retained, outputs ignored) |
-| `firmware/USER/Listings/` | Keil-generated listing directory (placeholder retained, outputs ignored) |
-| `firmware/prebuilt/Template.hex` | Historical HEX snapshot; not an independently verified release |
-| `hardware/` | PCB designs, circuit files and reference materials |
-| `mobile-app/` | Android application release and project assets |
-| `docs/` | Hardware, development and contribution guides |
+| `firmware/CORE/` | STM32 核心文件 |
+| `firmware/FWLIB/` | STM32 标准外设库 |
+| `firmware/HARDWAR/` | 板级传感器与外设驱动 |
+| `firmware/SYSTEM/` | 系统支持代码 |
+| `firmware/USER/Template.uvprojx` | 原 Keil 工程入口（工程内部相对路径未改动） |
+| `firmware/OBJ/` | Keil 编译输出位置，生成文件不再跟踪 |
+| `firmware/USER/Listings/` | Keil Listing 输出位置 |
+| `firmware/prebuilt/Template.hex` | 原仓库内保留的 HEX 文件，内容未改动 |
+| `hardware/` | PCB 与硬件资料 |
+| `mobile-app/` | Android 配套应用文件 |
+| `docs/` | 原有开发、硬件与贡献文档 |
+| `README.md` / `README_zh-CN.md` | 英文、中文项目入口 |
 
-Open `firmware/USER/Template.uvprojx` using Keil µVision. Its project settings reference relative source directories; changing firmware folder names can break the build. Firmware paths therefore remain untouched pending a build verification.
-
-This cleanup removes previously tracked Keil object, listing and user-session files from the **current repository tree**, while retaining history and a separate HEX snapshot for reference. It does not rewrite or shrink Git history. `.gitignore` prevents regenerated objects from being recommitted and preserves the directory placeholders.
-
-This educational prototype is **not a medical diagnostic device**; listed sensor/accuracy claims should be independently validated before clinical use.
+本次仅整理仓库路径和文件归档，不修改固件、PCB、APP 及原有功能逻辑。早期 Keil 构建产物可从 Git 历史中找回。
