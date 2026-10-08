@@ -95,6 +95,8 @@ For detailed hardware list and connection instructions, please refer to [hardwar
 
 **Build outputs:** Keil writes generated objects to `firmware/OBJ/` and listings to `firmware/USER/Listings/`. These build artifacts are intentionally ignored. A previously committed `Template.hex` snapshot is preserved under [`firmware/prebuilt/`](firmware/prebuilt/); its hardware compatibility has not been independently verified. For a reproducible firmware image, rebuild from source in Keil.
 
+For validation and device-build limitations, see [Firmware verification](docs/FIRMWARE-VERIFICATION.md). The retained `firmware/prebuilt/Template.hex` is a historical snapshot, **not a hardware-tested release**.
+
 ### Mobile APP Usage
 
 1. **Install APP**

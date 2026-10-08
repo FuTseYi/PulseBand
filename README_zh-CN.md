@@ -94,6 +94,8 @@
 
 **构建产物管理：** Keil 生成的对象文件位于 `firmware/OBJ/`，Listing 文件位于 `firmware/USER/Listings/`，均不再纳入版本控制。原仓库中的 `Template.hex` 快照已保存在 [`firmware/prebuilt/`](firmware/prebuilt/)，**尚未对其硬件兼容性进行独立验证**；建议使用 Keil 从源码重新编译固件。
 
+固件路径、HEX 快照完整性及实物测试说明详见 [固件验证文档](docs/FIRMWARE-VERIFICATION.md)。`firmware/prebuilt/Template.hex` 仅为历史快照，**不代表已验证可用于所有开发板**。
+
 ### 手机 APP 使用
 
 1. **安装 APP**
