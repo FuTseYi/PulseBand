@@ -234,6 +234,8 @@ Total_G = √(X² + Y² + Z²)
 - 宏定义：大写字母+下划线 `MAX_BUFFER_SIZE`
 - 注释：使用 Doxygen 风格注释
 
+有关漏洞反馈、固件使用与硬件安全限制，请阅读 [安全说明](SECURITY.md)。
+
 ## 📄 许可证
 
 本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
