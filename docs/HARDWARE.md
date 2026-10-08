@@ -265,7 +265,7 @@ PC13 -> Buzzer
 
 ## 相关文档
 
-- [README.md](README.md) - 项目概述
+- [README.md](../README.md) - 项目概述
 - [DEVELOPMENT.md](DEVELOPMENT.md) - 开发文档
 - [CONTRIBUTING.md](CONTRIBUTING.md) - 贡献指南
 

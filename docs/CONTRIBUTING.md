@@ -251,7 +251,7 @@ feat(sensor): 添加MPU6050陀螺仪支持
 ### 技术文档
 - [开发文档](DEVELOPMENT.md)
 - [硬件文档](HARDWARE.md)
-- [API参考](docs/API.md)
+- [开发说明](DEVELOPMENT.md)
 
 ### 工具和环境
 - [Keil uVision5](https://www.keil.com/)
@@ -272,7 +272,7 @@ feat(sensor): 添加MPU6050陀螺仪支持
 
 ## 许可证
 
-通过向此项目贡献代码，您同意您的贡献将在 [MIT License](LICENSE) 下进行许可。
+通过向此项目贡献代码，您同意您的贡献将在 [MIT License](../LICENSE) 下进行许可。
 
 ## 联系方式
 
@@ -283,7 +283,7 @@ feat(sensor): 添加MPU6050陀螺仪支持
 
 ## 相关文档
 
-- [README.md](README.md) - 项目概述
+- [README.md](../README.md) - 项目概述
 - [DEVELOPMENT.md](DEVELOPMENT.md) - 开发文档
 - [HARDWARE.md](HARDWARE.md) - 硬件说明
 
