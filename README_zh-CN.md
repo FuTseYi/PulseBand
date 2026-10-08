@@ -2,6 +2,7 @@
 
 <div align="center">
 
+[![Keil & HEX checks](https://github.com/FuTseYi/PulseBand/actions/workflows/keil-path-check.yml/badge.svg)](https://github.com/FuTseYi/PulseBand/actions/workflows/keil-path-check.yml)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Platform](https://img.shields.io/badge/platform-STM32F103-red.svg)
@@ -18,7 +19,7 @@
 
 ---
 
-![Star History Chart](https://api.star-history.com/svg?repos=FuTseYi/STM32-Health-Band&type=Date)
+![Star History Chart](https://api.star-history.com/svg?repos=FuTseYi/PulseBand&type=Date)
 
 ## 📖 项目简介
 
@@ -77,8 +78,8 @@
 
 1. **克隆项目**
    ```bash
-   git clone https://github.com/FuTseYi/STM32-Health-Band.git
-   cd STM32-Health-Band
+   git clone https://github.com/FuTseYi/PulseBand.git
+   cd PulseBand
    ```
 
 2. **打开工程**
@@ -143,7 +144,7 @@
 ## 📂 项目结构
 
 ```
-STM32-Health-Band/
+PulseBand/
 ├── firmware/                    # 固件源代码
 │   ├── CORE/                   # STM32 核心文件
 │   ├── FWLIB/                  # STM32 固件库
@@ -260,8 +261,8 @@ Total_G = √(X² + Y² + Z²)
 
 ## 📞 联系方式
 
-- 📧 **Issues**: [提交 Issue](https://github.com/FuTseYi/STM32-Health-Band/issues)
-- 💬 **Discussions**: [参与讨论](https://github.com/FuTseYi/STM32-Health-Band/discussions)
+- 📧 **Issues**: [提交 Issue](https://github.com/FuTseYi/PulseBand/issues)
+- 💬 **Discussions**: [参与讨论](https://github.com/FuTseYi/PulseBand/discussions)
 
 ## 📊 更新日志
 
