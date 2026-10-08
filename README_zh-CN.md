@@ -92,6 +92,8 @@
    - 连接 ST-Link 到 STM32 开发板
    - 点击 `Flash` → `Download` 或按 `F8`
 
+**构建产物管理：** Keil 生成的对象文件位于 `firmware/OBJ/`，Listing 文件位于 `firmware/USER/Listings/`，均不再纳入版本控制。原仓库中的 `Template.hex` 快照已保存在 [`firmware/prebuilt/`](firmware/prebuilt/)，**尚未对其硬件兼容性进行独立验证**；建议使用 Keil 从源码重新编译固件。
+
 ### 手机 APP 使用
 
 1. **安装 APP**
