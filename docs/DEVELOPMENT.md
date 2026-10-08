@@ -371,7 +371,7 @@ printf("Temperature: %.1f°C\r\n", temperature);
 
 ## 相关文档
 
-- [README.md](README.md) - 项目概述
+- [README.md](../README.md) - 项目概述
 - [HARDWARE.md](HARDWARE.md) - 硬件详细说明
 - [CONTRIBUTING.md](CONTRIBUTING.md) - 贡献指南
 
