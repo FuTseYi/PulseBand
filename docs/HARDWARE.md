@@ -1,4 +1,4 @@
-# STM32-Health-Band 硬件说明文档
+# PulseBand 硬件说明文档
 
 <div align="center">
 
