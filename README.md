@@ -1,4 +1,6 @@
-# STM32 Health Band
+# PulseBand
+
+**STM32F103 wearable health-monitoring prototype**
 
 <div align="center">
 
@@ -6,9 +8,9 @@
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Platform](https://img.shields.io/badge/platform-STM32F103-red.svg)
 ![Language](https://img.shields.io/badge/language-C-blue.svg)
-![Status](https://img.shields.io/badge/status-stable-brightgreen.svg)
+![Status](https://img.shields.io/badge/status-prototype-lightgrey.svg)
 
-**A Full-Featured Open Source Smart Health Band Project**
+**An open-source embedded wearable prototype**
 
 [Features](#-features) • [Quick Start](#-quick-start) • [Hardware](#-hardware-description) • [Development](#-development-documentation) • [Contributing](#-contributing)
 
@@ -21,7 +23,7 @@
 
 ## 📖 Project Overview
 
-STM32-Health-Band is an open-source smart health band project based on the **STM32F103C8T6** microcontroller. This project integrates multiple health monitoring functions, including heart rate detection, blood oxygen saturation monitoring, body temperature measurement, pedometer, and fall detection. The device communicates wirelessly with a mobile APP through the ESP8266 WiFi module for real-time health data viewing and remote monitoring.
+PulseBand is an open-source smart health band project based on the **STM32F103C8T6** microcontroller. This project integrates multiple health monitoring functions, including heart rate detection, blood oxygen saturation monitoring, body temperature measurement, pedometer, and fall detection. The device communicates wirelessly with a mobile APP through the ESP8266 WiFi module for real-time health data viewing and remote monitoring.
 
 This project is suitable for embedded system learners, electronics enthusiasts, and engineers interested in wearable device development.
 
@@ -38,11 +40,11 @@ This project is suitable for embedded system learners, electronics enthusiasts, 
 - 🔔 **Audio Alarm** - Buzzer alerts for abnormal conditions
 
 ### Technical Features
-- ⚡ **Low Power Design** - Optimized power management for extended battery life
+- ⚡ **Power Management** - Battery-powered design; runtime has not been independently benchmarked
 - 🔄 **Real-time Monitoring** - 100ms data acquisition cycle, fast response
 - 📊 **Data Storage** - Support for historical data caching
 - 🌐 **Wireless Transmission** - WiFi real-time data upload
-- 🎯 **High Precision Algorithm** - Calibrated sensor algorithms ensure data accuracy
+- 🎯 **Sensor Signal Processing** - Physiological estimates require calibration and evaluation against reference instruments
 
 ## 🚀 Quick Start
 
@@ -59,7 +61,7 @@ This project is suitable for embedded system learners, electronics enthusiasts, 
 | Buzzer | Passive Buzzer | 1 | Alarm notification |
 | Debugger | ST-Link V2 | 1 | Program download & debug |
 
-For detailed hardware list and connection instructions, please refer to [HARDWARE.md](HARDWARE.md)
+For detailed hardware list and connection instructions, please refer to [hardware documentation](docs/HARDWARE.md)
 
 ### Software Environment
 
@@ -76,12 +78,12 @@ For detailed hardware list and connection instructions, please refer to [HARDWAR
 
 1. **Clone the Project**
    ```bash
-   git clone https://github.com/YourUsername/STM32-Health-Band.git
+   git clone https://github.com/FuTseYi/STM32-Health-Band.git
    cd STM32-Health-Band
    ```
 
 2. **Open Project**
-   - Open `1、代码/USER/Template.uvprojx` with Keil uVision5
+   - Open `firmware/USER/Template.uvprojx` with Keil uVision5
 
 3. **Compile Project**
    - Click `Project` → `Build Target` or press `F7`
@@ -94,7 +96,7 @@ For detailed hardware list and connection instructions, please refer to [HARDWAR
 ### Mobile APP Usage
 
 1. **Install APP**
-   - Transfer `4、APP/发布版_手环APP.apk` to Android phone
+   - Transfer `mobile-app/发布版_手环APP.apk` to Android phone
    - Install APK file (allow installation from unknown sources)
 
 2. **Connect Device**
@@ -133,37 +135,24 @@ For detailed hardware list and connection instructions, please refer to [HARDWAR
 | PB5 | MAX30102 | Interrupt Input |
 | PC13 | Buzzer | GPIO Output |
 
-For complete hardware specifications, see [HARDWARE.md](HARDWARE.md)
+For hardware notes, see [hardware documentation](docs/HARDWARE.md)
 
 ## 📂 Project Structure
 
-```
-STM32-Health-Band/
-├── 1、代码/
-│   ├── CORE/              # STM32 core files
-│   ├── FWLIB/             # STM32 firmware library
-│   ├── HARDWAR/           # Hardware driver layer
-│   │   ├── MAX30102.c/h   # Heart rate & SpO2 sensor driver
-│   │   ├── adxl345.c/h    # Accelerometer driver
-│   │   ├── OLED.c/h       # OLED display driver
-│   │   ├── timer.c/h      # Timer driver
-│   │   └── IO_Init.c/h    # GPIO initialization
-│   ├── SYSTEM/            # System layer code
-│   │   ├── delay.c/h      # Delay functions
-│   │   ├── sys.c/h        # System configuration
-│   │   └── usart.c/h      # Serial communication
-│   └── USER/              # User application layer
-│       └── main.c         # Main program
-├── 2、PCB/                # PCB design files
-├── 3、硬件资料/           # Hardware specifications & datasheets
-├── 4、APP/                # Android mobile APP
-├── 5、原理图/             # Circuit schematics
-├── HARDWARE.md            # Hardware detailed documentation
-├── DEVELOPMENT.md         # Development documentation
-├── CONTRIBUTING.md        # Contributing guidelines
-├── LICENSE                # MIT License
-├── README.md              # Chinese README
-└── README_EN.md           # This file
+```text
+PulseBand/
+├── firmware/       # Keil uVision project, STM32 drivers and application
+│   ├── CORE/
+│   ├── FWLIB/
+│   ├── HARDWAR/
+│   ├── SYSTEM/
+│   └── USER/       # Template.uvprojx and main.c
+├── hardware/       # PCB, schematics and hardware references
+├── mobile-app/     # Companion Android APK and project files
+├── docs/           # Hardware, development and contribution guides
+├── README.md
+├── README_zh-CN.md
+└── LICENSE
 ```
 
 ## 💻 Development Documentation
@@ -190,17 +179,19 @@ Total_G = √(X² + Y² + Z²)
 Fall Detection: Total_G > 3g or Total_G < 0.5g
 ```
 
-For detailed development documentation, refer to [DEVELOPMENT.md](DEVELOPMENT.md)
+For detailed development documentation, refer to [development documentation](docs/DEVELOPMENT.md)
 
-### Performance Specifications
+### Reported Specifications and Verification Status
+
+The following values are taken from prior project documentation. **No independent measurement dataset or calibration protocol is currently included in this repository.** Accuracy and battery-life claims are therefore not verified benchmarks.
 
 | Specification | Value |
 |--------------|-------|
 | Heart Rate Range | 60-100 BPM |
-| SpO2 Accuracy | ±2% |
-| Temperature Accuracy | ±0.5°C |
-| Pedometer Accuracy | ≥95% |
-| Battery Life | Approx. 6-24 hours |
+| SpO2 Accuracy | Not independently verified |
+| Temperature Accuracy | Not independently verified |
+| Pedometer Accuracy | Not independently verified |
+| Battery Life | Not independently benchmarked |
 | WiFi Range | Indoor 10-15 meters |
 | Display Refresh Rate | 10Hz |
 | Data Acquisition Cycle | 100ms |
@@ -216,7 +207,7 @@ We welcome all forms of contributions! Whether it's reporting bugs, suggesting n
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-For detailed contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md)
+For detailed contribution guidelines, see [contribution guidelines](docs/CONTRIBUTING.md)
 
 ### Code Style
 - Function naming: lowercase + underscore `sensor_init()`
@@ -251,8 +242,8 @@ Thanks to the following open source projects and resources:
 
 ## 📞 Contact
 
-- 📧 **Issues**: [Submit Issue](https://github.com/YourUsername/STM32-Health-Band/issues)
-- 💬 **Discussions**: [Join Discussion](https://github.com/YourUsername/STM32-Health-Band/discussions)
+- 📧 **Issues**: [Submit Issue](https://github.com/FuTseYi/STM32-Health-Band/issues)
+- 💬 **Discussions**: [Join Discussion](https://github.com/FuTseYi/STM32-Health-Band/discussions)
 
 ## 📊 Changelog
 
@@ -273,7 +264,7 @@ Thanks to the following open source projects and resources:
 This device is for health monitoring reference and educational purposes only, not for medical diagnosis.  
 For health concerns, please consult professional medical institutions.
 
-**Made with ❤️ by 謝懿Shine**
+**An educational embedded systems prototype**
 
 </div>
 

@@ -1,0 +1,9 @@
+# Keil user/session and generated outputs
+*.uvguix.*
+*.uvoptx
+firmware/OBJ/
+firmware/USER/Listings/
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
