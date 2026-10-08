@@ -1,4 +1,4 @@
-# STM32 智能健康手环
+# PulseBand｜STM32 智能健康手环
 
 <div align="center">
 
@@ -8,7 +8,7 @@
 ![Language](https://img.shields.io/badge/language-C-blue.svg)
 ![Status](https://img.shields.io/badge/status-stable-brightgreen.svg)
 
-**一个功能完整的开源智能健康手环项目**
+**基于 STM32F103 的开源可穿戴健康监测原型**
 
 [功能特性](#-功能特性) • [快速开始](#-快速开始) • [硬件说明](#-硬件说明) • [开发文档](#-开发文档) • [贡献指南](#-贡献指南)
 
@@ -22,7 +22,7 @@
 
 ## 📖 项目简介
 
-STM32-Health-Band 是一个基于 **STM32F103C8T6** 微控制器的开源智能健康手环项目。该项目集成了多种健康监测功能，包括心率检测、血氧饱和度监测、体温测量、计步器以及跌倒检测等。设备通过 ESP8266 WiFi 模块与手机 APP 实现无线通信，可实时查看健康数据并进行远程监控。
+**PulseBand** 是一个基于 **STM32F103C8T6** 微控制器的开源智能健康手环项目。该项目集成了多种健康监测功能，包括心率检测、血氧饱和度监测、体温测量、计步器以及跌倒检测等。设备通过 ESP8266 WiFi 模块与手机 APP 实现无线通信，可实时查看健康数据并进行远程监控。
 
 本项目适合嵌入式系统学习者、电子爱好者以及希望了解可穿戴设备开发的工程师。
 
@@ -77,7 +77,7 @@ STM32-Health-Band 是一个基于 **STM32F103C8T6** 微控制器的开源智能�
 
 1. **克隆项目**
    ```bash
-   git clone https://github.com/YourUsername/STM32-Health-Band.git
+   git clone https://github.com/FuTseYi/STM32-Health-Band.git
    cd STM32-Health-Band
    ```
 
@@ -164,7 +164,6 @@ STM32-Health-Band/
 │   ├── CONTRIBUTING.md         # 贡献指南
 │   ├── DEVELOPMENT.md          # 开发文档
 │   ├── HARDWARE.md             # 硬件说明
-│   └── BADGES.md               # 项目徽章
 ├── LICENSE                      # MIT 许可证
 ├── README.md                    # 英文 README
 └── README_zh-CN.md             # 中文 README
