@@ -1,0 +1,50 @@
+name: Publish PulseBand v1.1.0 (one-time)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-v1.1.0.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view v1.1.0 >/dev/null 2>&1; then
+            echo 'v1.1.0 already released; no duplicate will be created.'
+            exit 0
+          fi
+          cat > "$RUNNER_TEMP/release-notes.md" <<'RELEASE_NOTES'
+          # PulseBand v1.1.0 — Repository Refresh
+          
+          **English**
+          
+          This release publishes a refreshed source snapshot of the STM32-based PulseBand wearable project under its new repository identity.
+          
+          - Repository renamed from `STM32-Health-Band` to **PulseBand**.
+          - The project retains its `firmware/`, `hardware/`, `mobile-app/` and `docs/` organization.
+          - Generated Keil objects and per-user build/session files were removed from the tracked current tree where applicable; source/project references are preserved.
+          - The historical `v1.0` release remains available.
+          
+          **中文**
+          
+          本次发行将更名为 **PulseBand** 的智能健康手环项目重新发布为源码快照，保留 STM32 固件、硬件设计、移动端资料及技术文档的组织结构，并保留旧版 `v1.0` 供历史查阅。
+          
+          **Verification / 验证范围**
+          
+          This is a **source-code release**. It does **not** imply a newly compiled, hardware-tested or medically certified firmware build. Any historical `.hex` file in the repository should be treated as an unverified reference, not a newly validated executable. / 本发行版不是经过重新编译、实物验证或医疗认证的固件发行。仓库内历史 HEX 文件（如有）仅作为参考，不代表已完成硬件兼容性验证。
+          
+          GitHub automatically provides source archives (`.zip` / `.tar.gz`) for this tag.
+          RELEASE_NOTES
+          gh release create v1.1.0 --title 'PulseBand v1.1.0 — Repository Refresh' --notes-file "$RUNNER_TEMP/release-notes.md" --target "$GITHUB_SHA" --latest
+          gh release view v1.1.0 --json url,tagName,name --jq '.url'
